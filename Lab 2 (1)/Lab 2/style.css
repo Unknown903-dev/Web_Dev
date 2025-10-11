@@ -1,0 +1,87 @@
+/* Basic page + nav styling */
+body {
+    margin: 0;
+    font-family: Arial;
+    line-height: 1.6;
+    /*back ground for page*/
+    background: linear-gradient(to bottom, rgb(35, 218, 238), rgb(196, 56, 196));
+    height: 100vh;
+    /*color of text*/
+    color: #111111;
+    text-align: left;
+}
+
+/*navigation bar sizing*/
+nav {
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    padding: 5px 10px;
+    gap: 12px;
+}
+
+/*navigation bar coloring and sizing*/
+nav a {
+    text-decoration: none;
+    color: #e00303;
+    padding: 6px 10px;
+    border-radius: 180px;
+    border: 1px solid #e5e5e5;
+}
+nav a:hover,
+
+/*let the user know what page they selected
+and the text gets large when you hover over it or the current button*/
+nav a[aria-current="page"] {
+    background: #2563eb;
+    color: #fff;
+    border-color: #d79a20;
+    font-size: 16px;
+    padding: 6px 10px;
+}
+
+/*moves all content in main*/
+main {
+    max-width: 960px;
+    margin: auto;
+    padding: 24px 16px;
+}
+table.styled { 
+  width: 25%;
+  border: 2px solid #c71515;
+  margin: 16px;
+  padding: 10px;
+}
+p.paragraph_font{
+    font-family: cursive;
+}
+h1.header_text{
+    font-weight: 900;
+}
+img.border {
+  border: 2px solid #c71515;
+}
+img.move{
+    margin-left: 12%;
+    border: 2px solid #c71515;
+}
+video { 
+    max-width: 30%; 
+    height: auto; 
+    display: block;
+    align-items: center; 
+    border: 2px solid #c71515;
+}
+ul.a {
+    list-style-type: decimal; 
+    margin-left: 12%; 
+    font-family: cursive;
+}
+
+.media-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;     
+  gap: 20px;               
+  margin: 20px;
+}
