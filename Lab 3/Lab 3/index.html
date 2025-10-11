@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">  
+            <div class="calc_keys">
+                <div class="display" id="display">0</div>
+                <button type="button" class="clear" onclick="clear_nums('')">C</button> 
+                <button type="button" class="numbers" onclick="append_n('7')">7</button>
+                <button type="button" class="numbers" onclick="append_n('8')">8</button>
+                <button type="button" class="numbers" onclick="append_n('9')">9</button>
+                <button type="button" class="operations" onclick="setOperator('/', this)">/</button>
+                <button type="button" class="numbers" onclick="append_n('4')">4</button>
+                <button type="button" class="numbers" onclick="append_n('5')">5</button>
+                <button type="button" class="numbers" onclick="append_n('6')">6</button>
+                <button type="button" class="operations" onclick="setOperator('*', this)">x</button>
+                <button type="button" class="numbers" onclick="append_n('1')">1</button>
+                <button type="button" class="numbers" onclick="append_n('2')">2</button>
+                <button type="button" class="numbers" onclick="append_n('3')">3</button>
+                <button type="button" class="operations" onclick="setOperator('-', this)">-</button>
+                <button type="button" class="numbers" onclick="append_n('0')">0</button>
+                <button type="button" class="numbers" onclick="append_n('.')">.</button>
+                <button type="button" class="equal" onclick="calc()">=</button>
+                <button type="button" class="operations" onclick="setOperator('+', this)">+</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
