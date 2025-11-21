@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" />
+</head>
+<body>
+    <main>
+        <section class="card" aria-labelledby="actions">
+            <h2 id="actions">Edit Grades</h2>
+
+            <div class="field">
+                <label for="searchName">Find a student's grade</label>
+                <div class="row">
+                    <input id="searchName" type="text" placeholder="e.g., John Doe" />
+                    <button class="accent" id="btnFind">Find</button>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="newName">Create a student</label>
+                <input id="newName" type="text" placeholder="Full name" />
+                <div class="row">
+                    <input id="newGrade" type="number" inputmode="decimal" step="0.1" placeholder="Grade (0-100)" />
+                    <button class="ok" id="btnCreate">Create</button>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="editName">Edit a student's grade</label>
+                <input id="editName" type="text" placeholder="Existing full name" />
+                <div class="row">
+                    <input id="editGrade" type="number" inputmode="decimal" step="0.1" placeholder="New grade" />
+                    <button class="warn" id="btnEdit">Update</button>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="deleteName">Delete a student</label>
+                <div class="row">
+                    <input id="deleteName" type="text" placeholder="Full name to delete" />
+                    <button class="danger" id="btnDelete">Delete</button>
+                </div>
+            </div>
+            
+            <div id="leftStatus" class="status muted" role="status" aria-live="polite"></div>
+        </section>
+
+        <section class="card" aria-labelledby="allGrades">
+            <div class="toolbar">
+                <button id="btnRefresh" class="accent">Refresh list</button>
+                <button id="btnLoadDemo" class="accent" title="Loads table area if empty">Clear table</button>
+            </div>
+            <h2 id="allGrades">All Students & Grades</h2>
+            <div class="tableWrap">
+                <table aria-describedby="tableNote">
+                    <thead>
+                        <tr><th>Name</th><th class="num">Grade</th></tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr><td colspan="2" class="muted">Click <strong>Refresh list</strong> to load data</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="rightStatus" class="status muted" role="status" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js')}}" defer></script>
+</body>
+</html>
